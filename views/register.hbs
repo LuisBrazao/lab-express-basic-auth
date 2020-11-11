@@ -1,0 +1,19 @@
+<h2> Register </h2>
+<form action="/register" method="POST">
+<label>
+  Username
+  <input type="text" name="username" placeholder="Your username" required>
+</label>
+  <label>
+    Password
+    <input type="password" name="password" placeholder="your password" required>
+  </label>
+  <button type="submit">
+Create account
+  </button>
+</form>
+{{#if errorMessage}}
+    <div>
+        {{errorMessage}}
+    </div>
+{{/if}}
