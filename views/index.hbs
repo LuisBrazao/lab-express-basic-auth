@@ -4,7 +4,10 @@
 {{#if user}}
 <form action="/logout" method="POST">
   <button type="submit">Logout</button>
-</form>{{else}}
+</form>
+<a href="/main">Random Cat (private page)</a>
+<a href="/private">Baby gif (private page)</a>
+{{else}}
 <a href="/register">Register</a>
 <a href="/login">Login</a>
 {{/if}}

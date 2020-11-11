@@ -41,7 +41,8 @@ router.post("/register", (req, res) => {
                     return;
                 }
                 User.create({ username, password: hashPassword })
-                    .then(() => {
+                    .then((user) => {
+                        req.session.currentUser = user;
                         res.redirect("/")
                     })
             })
